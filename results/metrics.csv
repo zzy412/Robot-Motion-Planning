@@ -1,0 +1,3 @@
+algorithm,success,time_ms,path_length,max_curvature,min_center_clearance,expanded
+AStar,1,0.259992,20.3137,2.82843,0.75,367
+HybridAStar,1,49.4823,22.3999,0.481125,0.660749,3366

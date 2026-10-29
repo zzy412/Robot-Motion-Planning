@@ -1,0 +1,14 @@
+﻿build/
+out/
+.vs/
+.vscode/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+__pycache__/
+*.pyc

@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.16)
+project(RobotMotionPlanning LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_library(planning_core src/VehicleModel.cpp src/GridMap.cpp src/AStar.cpp src/HybridAStar.cpp src/Visualization.cpp src/PurePursuit.cpp)
+target_include_directories(planning_core PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
+add_executable(RobotMotionPlanning main.cpp)
+target_link_libraries(RobotMotionPlanning PRIVATE planning_core)
