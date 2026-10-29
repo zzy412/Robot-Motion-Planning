@@ -93,9 +93,9 @@ Robot-Motion-Planning/
 
 The A* algorithm uses an evaluation function:
 
-\[
-f(n) = g(n) + h(n)
-\]
+$$
+f(n)=g(n)+h(n)
+$$
 
 where:
 
@@ -111,17 +111,13 @@ Unlike grid-based A*, Hybrid A* considers vehicle orientation and generates succ
 
 A simplified kinematic bicycle model is used:
 
-\[
-\dot{x} = v \cos(\theta)
-\]
-
-\[
-\dot{y} = v \sin(\theta)
-\]
-
-\[
-\dot{\theta} = \frac{v}{L}\tan(\delta)
-\]
+$$
+\begin{aligned}
+\dot{x} &= v\cos\theta \\
+\dot{y} &= v\sin\theta \\
+\dot{\theta} &= \frac{v}{L}\tan\delta
+\end{aligned}
+$$
 
 where:
 
@@ -133,9 +129,9 @@ where:
 
 The steering-angle limit introduces a minimum turning radius:
 
-\[
-R_{\min} = \frac{L}{\tan(\delta_{\max})}
-\]
+$$
+R_{\min}=\frac{L}{\tan(\delta_{\max})}
+$$
 
 This makes Hybrid A* more appropriate than geometric A* for generating reference paths for Ackermann-steered vehicles.
 
