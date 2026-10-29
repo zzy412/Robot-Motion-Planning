@@ -266,6 +266,42 @@ Typical output files include:
 
 The exact output location depends on the program's working directory or the output-directory argument.
 
+## Simulation Results
+
+### A* and Hybrid A* Path Planning
+
+The following figure illustrates the comparison between
+grid-based A* planning, Hybrid A* planning, and vehicle
+path tracking in the C++ simulation environment.
+
+![A* and Hybrid A* Planning](docs/images/hybrid_astar.png)
+
+*Figure 1. A* and Hybrid A* path planning simulation.*
+
+### Pure Pursuit Path Tracking
+
+Pure Pursuit is used to track the reference path generated
+by the motion planner.
+
+The simulation evaluates tracking accuracy, steering behavior,
+and vehicle motion.
+
+![Pure Pursuit Tracking](docs/images/pure_pursuit.png)
+
+*Figure 2. Pure Pursuit trajectory tracking simulation.*
+
+### ROS 2 and RViz2 Visualization
+
+The ROS 2 simulation includes the Hybrid A* planning node
+and the Ackermann vehicle kinematic simulation node.
+
+RViz2 is used to display the occupancy grid, planned path,
+vehicle marker, and simulated vehicle trajectory.
+
+![ROS 2 RViz2 Simulation](docs/images/rviz2_simulation.png)
+
+*Figure 3. ROS 2 Ackermann vehicle simulation in RViz2.*
+
 ## 9. Limitations
 
 This repository is intended for educational and experimental use.
