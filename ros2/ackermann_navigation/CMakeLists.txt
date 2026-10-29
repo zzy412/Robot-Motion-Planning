@@ -57,5 +57,28 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 
+# Pure Pursuit online closed-loop controller
+add_executable(controller_node
+  src/controller_node.cpp
+)
+
+ament_target_dependencies(controller_node
+  rclcpp
+  nav_msgs
+  geometry_msgs
+  ackermann_msgs
+)
+
+install(TARGETS
+  controller_node
+  DESTINATION lib/${PROJECT_NAME}
+)
+
+# Install launch files and RViz2 configurations
+install(
+  DIRECTORY launch rviz
+  DESTINATION share/${PROJECT_NAME}
+)
+
 ament_package()
 
